@@ -1,4 +1,4 @@
-package org.bank;
+package org.bank.test;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
@@ -9,6 +9,8 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
+import org.bank.Models.Operation;
+import org.bank.Models.StandardBankAccount;
 import org.junit.After;
 import org.junit.jupiter.api.Test;
 

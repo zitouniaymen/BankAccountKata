@@ -1,8 +1,9 @@
-package org.bank;
+package org.bank.service;
 
 import java.util.Date;
 import java.util.List;
 
+import org.bank.Models.Operation;
 import org.omg.SendingContext.RunTime;
 
 public interface BankAccount{

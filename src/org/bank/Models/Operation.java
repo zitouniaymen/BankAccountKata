@@ -1,4 +1,4 @@
-package org.bank;
+package org.bank.Models;
 
 import java.util.Date;
 /**

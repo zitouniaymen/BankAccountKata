@@ -1,9 +1,11 @@
-package org.bank;
+package org.bank.Models;
 
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
+
+import org.bank.service.BankAccount;
 /**
  * 
  * @author Zitouni
