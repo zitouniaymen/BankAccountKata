@@ -18,7 +18,7 @@ public interface BankAccount{
 	 */
 	public void withdraw(float amount);
 	/**
-	 * Affichage de la liste des operations à partir d'une date prècise 
+	 * Affichage de la liste des operations à partir d'une date donner  
 	 * @param time
 	 * @return
 	 */

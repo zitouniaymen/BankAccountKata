@@ -1,7 +1,11 @@
 package org.bank;
 
 import java.util.Date;
-
+/**
+ * 
+ * @author Zitouni
+ *Declaration de la class Operation 
+ */
 public class Operation {
 
 	private String operation;

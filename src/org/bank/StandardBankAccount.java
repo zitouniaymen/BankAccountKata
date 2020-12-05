@@ -4,7 +4,11 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
-
+/**
+ * 
+ * @author Zitouni
+ *
+ */
 public class StandardBankAccount implements BankAccount {
 	private Date date;
 	private float amount;
@@ -49,7 +53,9 @@ public class StandardBankAccount implements BankAccount {
 	public void setTheOperations(List<Operation> theOperations) {
 		this.theOperations = theOperations;
 	}
-
+/**
+ * make a deposit in my account
+ */
 	@Override
 	public void deposit(float amount) {
 		
@@ -58,22 +64,21 @@ public class StandardBankAccount implements BankAccount {
 			float newBalance = balance + amount;
 			balance = newBalance;
 			Date date = Calendar.getInstance().getTime();
-			Operation op = new Operation();
-			op.setOperation("deposit");
-			op.setDate(date);
-			op.setBalance(balance);
-			op.setAmount(amount);
+			Operation op = new Operation("deposit", date, amount, balance);
 			this.theOperations.add(op);
 			System.out.println("deposit dans le compte  " + "AMOUNT " + amount + " BALANCE " + balance + " DATE " + date);
 
 		} catch (Exception e) {
+			
 			e.getMessage();
 		}finally {
 			System.out.println(" fin deposit dans le compte ");
 		}
 
 	}
-
+/**
+ *  see the history  of my operations with date
+ */
 	@Override
 	public List<Operation> getOperationsAfter(Date time) {
 		System.out.println(" Debut de la  liste des operation à partir de la date "+time);
@@ -92,7 +97,9 @@ public class StandardBankAccount implements BankAccount {
 		}
 		return result;
 	}
-
+/**
+ * make a withdrawal from my account
+ */
 	@Override
 	public void withdraw(float amount) {
 		
@@ -110,7 +117,9 @@ public class StandardBankAccount implements BankAccount {
 		}
 
 	}
-
+/**
+ *  see the history  of my operations
+ */
 	@Override
 	public void getALLOperation() {
 		System.out.println("La liste des operations sue le compte ");

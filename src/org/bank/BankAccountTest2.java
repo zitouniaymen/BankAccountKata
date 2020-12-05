@@ -1,10 +1,7 @@
 package org.bank;
 
-import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.ZoneId;
-import java.time.format.DateTimeFormatter;
-import java.util.Calendar;
 import java.util.Date;
 
 public class BankAccountTest2 {
@@ -12,7 +9,9 @@ public class BankAccountTest2 {
 	public static void main(String[] args) {
 
 		StandardBankAccount first = new StandardBankAccount(new Date(), 1000, 1000);
-		StandardBankAccount second = new StandardBankAccount(new Date(), 1000, 1000);
+		StandardBankAccount second = new StandardBankAccount(new Date(), 1650, 4000);
+	
+		
 		/**
 		 * faire un deposite sur le compte
 		 */
