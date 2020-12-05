@@ -26,18 +26,25 @@ class StandardBankTest {
 	 private static boolean isNotMatch(List<Operation> clist1, List<Operation> clist2) {
 	        return clist1.size() != clist2.size() || !clist1.equals(clist2);
 	      }
+	 /**
+	  * Test make a deposit in my account
+	  */
 	@Test
 	void deposittest() {
 		first.deposit(1000);
 		assertTrue(first.getBalance()== 2000);
 }
-
+/**
+ * Test  make a withdrawal from my account
+ */
 	@Test
 	void withdrawtest() {
 		first.withdraw(1000);
 		assertTrue(first.getBalance()== 0);
 	}
-	
+	/**
+	 * see the history with date
+	 */
 	@Test
 	public void getOperationsAfterTest() 
 	{
@@ -50,7 +57,9 @@ class StandardBankTest {
 boolean rest=isNotMatch(theOperationstest, first.getOperationsAfter(dateTest));
 	assertTrue(rest== true);
 	}
-	
+	/**
+	 * see the ALL history 
+	 */
 	@Test
 	void getALLOperationtest() {
 		
