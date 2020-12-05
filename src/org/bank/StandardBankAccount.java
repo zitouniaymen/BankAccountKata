@@ -14,6 +14,7 @@ public class StandardBankAccount implements BankAccount {
 	private float amount;
 	private float balance;
 	private List<Operation> theOperations = new ArrayList<Operation>();
+	private Tache tache;
 
 	public StandardBankAccount(Date date, float amount, float balance) {
 		super();
@@ -64,7 +65,7 @@ public class StandardBankAccount implements BankAccount {
 			float newBalance = balance + amount;
 			balance = newBalance;
 			Date date = Calendar.getInstance().getTime();
-			Operation op = new Operation("deposit", date, amount, balance);
+			Operation op = new Operation(Tache.DEPOSIT_COUNT.toString(), date, amount, balance);
 			this.theOperations.add(op);
 			System.out.println("deposit dans le compte  " + "AMOUNT " + amount + " BALANCE " + balance + " DATE " + date);
 
@@ -108,7 +109,7 @@ public class StandardBankAccount implements BankAccount {
 			float newBalance = balance - amount;
 			balance = newBalance;
 			Date date = Calendar.getInstance().getTime();
-			this.theOperations.add(new Operation("withdraw", date, amount, balance));
+			this.theOperations.add(new Operation(Tache.WITHFRAWAL.toString(), date, amount, balance));
 			System.out.println("withdraw dans le compte " + "AMOUNT " + amount + " BALANCE " + balance + " DATE " + date);
 		} catch (Exception e) {
 			e.getMessage();
