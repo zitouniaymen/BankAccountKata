@@ -109,7 +109,7 @@ public class StandardBankAccount implements BankAccount {
 			float newBalance = balance - amount;
 			balance = newBalance;
 			Date date = Calendar.getInstance().getTime();
-			this.theOperations.add(new Operation(Tache.WITHFRAWAL.toString(), date, amount, balance));
+			this.theOperations.add(new Operation(Tache.WITHFRAWAL_COUNT.toString(), date, amount, balance));
 			System.out.println("withdraw dans le compte " + "AMOUNT " + amount + " BALANCE " + balance + " DATE " + date);
 		} catch (Exception e) {
 			e.getMessage();
