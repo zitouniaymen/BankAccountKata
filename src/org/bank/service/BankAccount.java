@@ -9,23 +9,23 @@ import org.omg.SendingContext.RunTime;
 public interface BankAccount{
 
 /**
- * depot dans le compte 
+ * Deposit In my Account 
  * @param amount
  */
 	public void deposit(float amount);
 	/**
-	 * withdraw de la compte
+	 * withdraw In my Account 
 	 * @param amount
 	 */
 	public void withdraw(float amount);
 	/**
-	 * Affichage de la liste des operations à partir d'une date donner  
+	 * Viewing all transcations on the account  
 	 * @param time
 	 * @return
 	 */
 	public List<Operation> getOperationsAfter(Date time);
 	/**
-	 * Afffichage de toutes les opèrations dans le comptes 
+	 * Viewing all transcations on the account
 	 */
 	public void getALLOperation();
 

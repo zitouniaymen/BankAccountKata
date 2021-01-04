@@ -16,11 +16,11 @@ public class BankAccountTest2 {
 	
 		
 		/**
-		 * faire un deposite sur le compte
+		 * Deposit In my Account
 		 */
 		first.deposit(1000);
 		/**
-		 * faire un withdraw sur le compte
+		 * un withdraw In my Accounte
 		 */
 		first.withdraw(1000);
 
@@ -28,15 +28,16 @@ public class BankAccountTest2 {
 
 		first.withdraw(1500);
 		/**
-		 * Affichage de toutes les operations sur le compte
+		 *
+Viewing all transcations on the account
 		 */
 		first.getALLOperation();
 
 		/**
-		 * Affichage de la liste des operations avec une date precise 
+Display of the list of operations with a specific date
 		 */
 		ZoneId defaultZoneId = ZoneId.systemDefault();
-		LocalDate localDate = LocalDate.of(2020, 12, 04);
+		LocalDate localDate = LocalDate.of(2021, 01, 03);
 		Date date = Date.from(localDate.atStartOfDay(defaultZoneId).toInstant());
 		if (first.getOperationsAfter(date) != null) {
 			for (Operation op : first.getOperationsAfter(date)) {
