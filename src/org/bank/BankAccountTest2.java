@@ -41,8 +41,10 @@ Display of the list of operations with a specific date
 		Date date = Date.from(localDate.atStartOfDay(defaultZoneId).toInstant());
 		if (first.getOperationsAfter(date) != null) {
 			for (Operation op : first.getOperationsAfter(date)) {
-				System.out.println(op.getOperation() + " BALANCE " + op.getBalance() + " AMOUNT  " + op.getAmount()
-						+ " DATE " + op.getDate());
+				
+				System.out.println(op.getOperation()	+ " DATE " + op.getDate() + " AMOUNT  " + op.getAmount()
+				+ " BALANCE " + op.getBalance());
+		
 			}
 		}
 
