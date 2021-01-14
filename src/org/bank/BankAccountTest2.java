@@ -42,8 +42,8 @@ Display of the list of operations with a specific date
 		if (first.getOperationsAfter(date) != null) {
 			for (Operation op : first.getOperationsAfter(date)) {
 				
-				System.out.println(op.getOperation()	+ " DATE " + op.getDate() + " AMOUNT  " + op.getAmount()
-				+ " BALANCE " + op.getBalance());
+				System.out.println(op.getOperation() + " DATE " + op.getDate() + " AMOUNT  " + op.getAmount()+ " BALANCE " 
+				+ op.getBalance());
 		
 			}
 		}
